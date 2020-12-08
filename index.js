@@ -18,7 +18,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingAge = 25;
+if (votingAge >= 18) {
+    console.log(`true`);
+}
 
 /*
 Task 1b - Values
@@ -31,7 +34,12 @@ Do the following:
    HINT: no function required
 */
 
-
+let var1 = 6;
+let var2 = 2;
+if (var1 > 5) {
+    var1 = (var1 + var2);
+    console.log(var1);
+}
 
 
 
@@ -46,8 +54,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+const newVar = Number('1999');
+console.log(newVar);
 
 /*
 Task 1d - Multiply
@@ -58,8 +66,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply( /*add your code here*/ ) {
-    /*add your code here*/
+function multiply(a, b) {
+    return a * b;
 }
 
 
@@ -74,8 +82,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears( /*add your code here*/ ) {
-    /*add your code here*/
+function dogYears(a) {
+    return a * 7;
 }
 
 
@@ -107,8 +115,22 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */
 
-function hungryDog( /*add your code here*/ ) {
-    /*add your code here*/
+function hungryDog(weight, age) {
+    if (age >= 1 && weight <= 5) {
+        return (weight / 100) * 5;
+    } else if (age >= 1 && weight >= 6 && weight <= 10) {
+        return (weight / 100) * 4;
+    } else if (age >= 1 && weight >= 11 && weight <= 15) {
+        return (weight / 100) * 3;
+    } else if (age >= 1 && weight > 15) {
+        return (weight / 100) * 2;
+    } else if (age < 1 && age >= (0.167) && age < (0.333)) {
+        return (weight / 100) * 10;
+    } else if (age < 1 && age >= (0.333) && age <= (0.583)) {
+        return (weight / 100) * 5;
+    } else if (age < 1 && age >= (0.583)) {
+        return (weight / 100) * 4;
+    }
 }
 
 
@@ -134,8 +156,24 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+
+let computer = Math.random();
+if (computer < 0.34) {
+    computer = 'rock';
+} else if (computer < 0.67) {
+    computer = 'paper';
+} else {
+    computer = 'scissors';
+}
+
 function game(user, computer) {
-    /*add your code here*/
+    if (user === computer) {
+        return `it's a tie`;
+    } else if (user === 'rock' && computer === 'scissors') || (user === 'paper' && computer === 'rock') || (user === 'scissors' && computer === 'paper') {
+        return 'you win!';
+    } else if (user === 'rock' && computer === 'paper') || (user === 'paper' && computer === 'scissors') || (user === 'scissors' && computer === 'rock') {
+        return 'you lose!';
+    }
 }
 
 
