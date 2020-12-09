@@ -271,9 +271,18 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter( /*add your code here*/ ) {
-    /*add your code here*/
+
+function vowelCounter(str) {
+    let vowels = 'aeiouAEIOU';
+    let vowelsCount = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U') !== -1) {
+            vowelsCount += 1;
+        }
+    }
+    return vowelsCount;
 }
+console.log(vowelCounter(`Surely you cAn't be serious? I'm always serious, and don't call me Shirley`));
 
 
 
