@@ -169,9 +169,9 @@ if (computer < 0.34) {
 function game(user, computer) {
     if (user === computer) {
         return `it's a tie`;
-    } else if (user === 'rock' && computer === 'scissors') || (user === 'paper' && computer === 'rock') || (user === 'scissors' && computer === 'paper') {
+    } else if (user === 'rock' && computer === 'scissors' || user === 'paper' && computer === 'rock' || user === 'scissors' && computer === 'paper') {
         return 'you win!';
-    } else if (user === 'rock' && computer === 'paper') || (user === 'paper' && computer === 'scissors') || (user === 'scissors' && computer === 'rock') {
+    } else if (user === 'rock' && computer === 'paper' || user === 'paper' && computer === 'scissors' || user === 'scissors' && computer === 'rock') {
         return 'you lose!';
     }
 }
@@ -189,8 +189,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles( /*add your code here*/ ) {
-    /*add your code here*/
+function miles(num) {
+    return num * 0.621371;
 }
 
 
@@ -203,8 +203,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet( /*add your code here*/ ) {
-    /*add your code here*/
+function feet(num) {
+    return num / 30.48;
 }
 
 
@@ -219,8 +219,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong( /*add your code here*/ ) {
-    /*add your code here*/
+function annoyingSong(num) {
+    for (let i = num; i < 100; i++) {
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i + -1} bottles of soda on the wall`;
+    }
 }
 
 
@@ -253,7 +255,6 @@ function grade(num) {
     }
 }
 
-// console.log('grade function', grade(85));
 
 
 
